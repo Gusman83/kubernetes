@@ -1,5 +1,5 @@
-apiVersion: v1
-kind: Namespace
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: nodejs-web
   labels:
@@ -19,6 +19,12 @@ spec:
           image: khannedy/nodejs-web:1
           ports:
             - containerPort: 3000
+---
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: scalling
 
 ---
 
